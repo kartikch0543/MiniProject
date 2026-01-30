@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Manager | Project 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-wrapper">
+        <header>
+            <h1>Bank Manager</h1>
+        </header>
+
+        <main class="content">
+            <div class="balance-card">
+                <p>Total Balance</p>
+                <h2 id="balanceDisplay">$0.00</h2>
+            </div>
+
+            <div class="actions-grid">
+                <div class="action-card deposit">
+                    <h3>Deposit</h3>
+                    <div class="input-group">
+                        <input type="number" id="depositInput" placeholder="Amount">
+                    </div>
+                    <button onclick="deposit()">Deposit</button>
+                </div>
+
+                <div class="action-card withdraw">
+                    <h3>Withdraw</h3>
+                    <div class="input-group">
+                        <input type="number" id="withdrawInput" placeholder="Amount">
+                    </div>
+                    <button onclick="withdraw()">Withdraw</button>
+                    <p class="error-msg" id="withdrawError">Insufficient funds!</p>
+                </div>
+            </div>
+
+            <div class="history-section">
+                <h3>Transactions</h3>
+                <ul id="transactionList">
+                    <!-- Transactions go here -->
+                </ul>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

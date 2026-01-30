@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Machine | Project 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>E-Voting System</h1>
+        </header>
+
+        <div class="candidates-grid">
+            <div class="card" id="c1">
+                <div class="card-icon red">A</div>
+                <h2>Team Alpha</h2>
+                <p>Innovation & Speed</p>
+                <div class="vote-count">Votes: <span id="count1">0</span></div>
+                <button onclick="vote(1)">Vote Alpha</button>
+            </div>
+
+            <div class="card" id="c2">
+                <div class="card-icon blue">B</div>
+                <h2>Team Beta</h2>
+                <p>Stability & Trust</p>
+                <div class="vote-count">Votes: <span id="count2">0</span></div>
+                <button onclick="vote(2)">Vote Beta</button>
+            </div>
+
+            <div class="card" id="c3">
+                <div class="card-icon green">C</div>
+                <h2>Team Gamma</h2>
+                <p>Growth & Nature</p>
+                <div class="vote-count">Votes: <span id="count3">0</span></div>
+                <button onclick="vote(3)">Vote Gamma</button>
+            </div>
+
+            <div class="card" id="c4">
+                <div class="card-icon not">NOT</div>
+                <h2>NOTA</h2>
+                <p>None of the Above</p>
+                <div class="vote-count">Votes: <span id="count4">0</span></div>
+                <button onclick="vote(4)">Vote NOTA</button>
+            </div>
+        </div>
+
+        <div class="control-panel">
+            <button class="result-btn" onclick="showWinner()">Declare Result</button>
+            <button class="reset-btn" onclick="resetVotes()">Reset All</button>
+        </div>
+
+        <div id="winnerModal" class="modal">
+            <div class="modal-content">
+                <h2 id="winnerText">Winner: Team Alpha!</h2>
+                <button onclick="closeModal()">Close</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
