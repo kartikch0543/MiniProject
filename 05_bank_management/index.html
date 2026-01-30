@@ -6,46 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bank Manager | Project 5</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app-wrapper">
-        <header>
-            <h1>Bank Manager</h1>
-        </header>
+    <div class="container">
+        <h1>Bank Manager</h1>
 
-        <main class="content">
-            <div class="balance-card">
-                <p>Total Balance</p>
-                <h2 id="balanceDisplay">$0.00</h2>
+        <div id="balance-display">
+            <h2>Total Balance</h2>
+            <span id="balanceDisplay">$0.00</span>
+        </div>
+
+        <div class="actions">
+            <div class="input-group">
+                <input type="number" id="depositInput" placeholder="Enter amount...">
+                <button id="depositBtn" onclick="deposit()">Deposit</button>
             </div>
 
-            <div class="actions-grid">
-                <div class="action-card deposit">
-                    <h3>Deposit</h3>
-                    <div class="input-group">
-                        <input type="number" id="depositInput" placeholder="Amount">
-                    </div>
-                    <button onclick="deposit()">Deposit</button>
-                </div>
-
-                <div class="action-card withdraw">
-                    <h3>Withdraw</h3>
-                    <div class="input-group">
-                        <input type="number" id="withdrawInput" placeholder="Amount">
-                    </div>
-                    <button onclick="withdraw()">Withdraw</button>
-                    <p class="error-msg" id="withdrawError">Insufficient funds!</p>
-                </div>
+            <div class="input-group">
+                <input type="number" id="withdrawInput" placeholder="Enter amount...">
+                <button id="withdrawBtn" onclick="withdraw()">Withdraw</button>
             </div>
+        </div>
 
-            <div class="history-section">
-                <h3>Transactions</h3>
-                <ul id="transactionList">
-                    <!-- Transactions go here -->
-                </ul>
-            </div>
-        </main>
+        <p class="error-msg" id="withdrawError"
+            style="color: red; text-align: center; margin-top: 1rem; display: none;">Insufficient funds!</p>
+
+        <!-- Keeping the list structure if the script uses it, though the simple CSS focused on inputs -->
+        <ul id="transactionList" style="display: none;"></ul>
     </div>
     <script src="script.js"></script>
 </body>

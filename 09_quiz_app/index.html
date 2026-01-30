@@ -4,49 +4,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Master | Project 9</title>
+    <title>Quiz App | Project 9</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <div class="app-container">
-        <!-- Start Screen -->
-        <div id="startInfo" class="screen active">
-            <h1>Quiz Master</h1>
-            <p>Test your knowledge!</p>
-            <button onclick="startQuiz()">Start Quiz</button>
-        </div>
+    <div class="container">
+        <h1>Quiz App</h1>
 
-        <!-- Quiz Screen -->
-        <div id="quizScreen" class="screen">
-            <header>
-                <div class="progress-container">
-                    <div class="progress-bar" id="progress"></div>
+        <div class="quiz-body" id="quiz">
+            <div class="question-container">
+                <h2 id="question">Question text loads here...</h2>
+                <div class="options-container">
+                    <button class="option-btn">Option A</button>
+                    <button class="option-btn">Option B</button>
+                    <button class="option-btn">Option C</button>
+                    <button class="option-btn">Option D</button>
                 </div>
-                <div class="stats">
-                    <span id="qCount">Q: 1/5</span>
-                    <span id="score">Score: 0</span>
-                </div>
-            </header>
-
-            <div class="question-box">
-                <h2 id="questionText">Question goes here?</h2>
             </div>
-
-            <div class="options-grid" id="optionsGrid">
-                <!-- Options injected by JS -->
-            </div>
-
-            <button id="nextBtn" onclick="nextQuestion()" disabled>Next Question</button>
-        </div>
-
-        <!-- Result Screen -->
-        <div id="resultScreen" class="screen">
-            <div class="trophy">🏆</div>
-            <h2>Quiz Completed!</h2>
-            <p id="finalScore">Your Score: 0/5</p>
-            <button onclick="restartQuiz()">Play Again</button>
+            <button id="submitBtn">Submit</button>
         </div>
     </div>
     <script src="script.js"></script>

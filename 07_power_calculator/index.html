@@ -1,28 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>Power of Inputs</title>
-  <style>
-    input {
-      display: block;
-      margin: 10px;
-      padding: 8px;
-      width: 150px;
-      
-      justify-content: center;
-      align-items: center;
-      
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Power Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+    <div class="container">
+        <h1>Power Calculator</h1>
 
-  <input type="number" id="i1" placeholder="x">
-  <input type="number" id="i2" placeholder="x²">
-  <input type="number" id="i3" placeholder="x³">
-  <input type="number" id="i4" placeholder="x⁴">
+        <div class="input-group">
+            <label for="i1">Base Number (x)</label>
+            <input type="number" id="i1" placeholder="Enter base number">
+        </div>
 
-  <script src="script.js"></script>
+        <!-- Note: The original script likely auto-calculates or uses these inputs differently. 
+         Preserving IDs i1, i2, i3, i4 as they were in the original file. -->
+
+        <div class="input-group">
+            <label for="i2">Square (x²)</label>
+            <input type="number" id="i2" placeholder="Result">
+        </div>
+
+        <div class="input-group">
+            <label for="i3">Cube (x³)</label>
+            <input type="number" id="i3" placeholder="Result">
+        </div>
+
+        <div class="input-group">
+            <label for="i4">Power of 4 (x⁴)</label>
+            <input type="number" id="i4" placeholder="Result">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
+
 </html>

@@ -1,172 +1,97 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f0f2f5;
+    font-family: 'Inter', sans-serif;
+    background-color: #fce7f3;
     display: flex;
     justify-content: center;
-    padding-top: 50px;
-    height: 100vh;
+    align-items: center;
+    min-height: 100vh;
     margin: 0;
-    box-sizing: border-box;
+    color: #334155;
 }
 
-.app-container {
+.container {
     background-color: white;
-    width: 400px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    padding: 25px;
-    display: flex;
-    flex-direction: column;
-    max-height: 80vh;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #fbcfe8;
 }
 
-header {
+h1 {
     text-align: center;
-    margin-bottom: 25px;
+    margin-bottom: 2rem;
+    color: #db2777;
+    font-size: 1.75rem;
 }
 
-header h1 {
-    margin: 0 0 5px 0;
-    color: #2c3e50;
-}
-
-header p {
-    color: #95a5a6;
-    margin: 0;
-    font-size: 14px;
-}
-
-.input-area {
+.input-section {
     display: flex;
-    gap: 10px;
-    margin-bottom: 20px;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
 }
 
-.input-area input {
+#todoInput {
     flex: 1;
-    padding: 10px;
-    border: 2px solid #e0e0e0;
-    border-radius: 6px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
-.input-area input:focus {
-    border-color: #9b59b6;
+#todoInput:focus {
+    outline: none;
+    border-color: #db2777;
+    box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.1);
 }
 
 #addBtn {
-    padding: 10px 20px;
-    background-color: #9b59b6;
+    padding: 0.75rem 1.5rem;
+    background-color: #db2777;
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
     cursor: pointer;
-    font-weight: bold;
-    transition: background 0.3s;
 }
 
 #addBtn:hover {
-    background-color: #8e44ad;
+    background-color: #be185d;
 }
 
-.task-list {
+ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    overflow-y: auto;
-    flex-grow: 1;
 }
 
-.task-item {
+li {
+    background-color: #fdf2f8;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px;
-    border-bottom: 1px solid #f1f1f1;
-    transition: background 0.2s;
+    border: 1px solid #fce7f3;
 }
 
-.task-item:last-child {
-    border-bottom: none;
-}
-
-.task-item:hover {
-    background-color: #fafafa;
-}
-
-.task-content {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    cursor: pointer;
-}
-
-.checkbox-custom {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #9b59b6;
-    border-radius: 50%;
-    display: inline-block;
-    position: relative;
-}
-
-.task-item.completed .checkbox-custom {
-    background-color: #9b59b6;
-}
-
-.task-text {
-    font-size: 16px;
-    color: #333;
-}
-
-.task-item.completed .task-text {
+li.completed {
     text-decoration: line-through;
-    color: #bdc3c7;
+    opacity: 0.6;
 }
 
 .delete-btn {
-    background-color: #e74c3c;
-    color: white;
+    background-color: transparent;
+    color: #ef4444;
     border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
     cursor: pointer;
-    font-size: 12px;
-    opacity: 0.8;
-    transition: opacity 0.3s;
+    padding: 4px;
+    font-size: 1.1rem;
 }
 
 .delete-btn:hover {
-    opacity: 1;
-}
-
-.footer-controls {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 14px;
-    color: #7f8c8d;
-    padding-top: 10px;
-    border-top: 1px solid #f1f1f1;
-}
-
-.footer-controls button {
-    background: none;
-    border: none;
-    color: #9b59b6;
-    cursor: pointer;
-    font-weight: 600;
-}
-
-.footer-controls button:hover {
-    text-decoration: underline;
-}
-
-.empty-state {
-    text-align: center;
-    color: #bdc3c7;
-    margin-top: 20px;
+    color: #b91c1c;
 }

@@ -1,84 +1,83 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    color: #334155;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     width: 100%;
-    max-width: 400px;
+    max-width: 450px;
+    border: 1px solid #e2e8f0;
 }
 
-header h1 {
-    color: #333;
+h1 {
     text-align: center;
-    margin-bottom: 5px;
+    color: #1e293b;
+    margin-bottom: 2rem;
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
-header p {
-    color: #777;
-    text-align: center;
-    margin-bottom: 25px;
+.form-group {
+    margin-bottom: 1.5rem;
 }
 
-.input-group {
-    margin-bottom: 20px;
-}
-
-.input-group label {
+label {
     display: block;
-    margin-bottom: 8px;
-    color: #555;
+    margin-bottom: 0.5rem;
     font-weight: 500;
+    color: #475569;
 }
 
-.input-group input {
+input,
+select,
+textarea {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #1e293b;
     box-sizing: border-box;
-    transition: border-color 0.3s;
+    transition: border-color 0.2s;
 }
 
-.input-group input:focus {
-    border-color: #007bff;
+input:focus,
+select:focus,
+textarea:focus {
     outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-.btn-submit {
+button {
     width: 100%;
-    padding: 12px;
-    background-color: #007bff;
+    padding: 0.875rem;
+    background-color: #6366f1;
     color: white;
     border: none;
-    border-radius: 5px;
-    font-size: 16px;
+    border-radius: 8px;
+    font-size: 1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
-.btn-submit:hover {
-    background-color: #0056b3;
+button:hover {
+    background-color: #4f46e5;
 }
 
-.error-msg {
-    color: #d9534f;
-    font-size: 14px;
-    margin-top: 5px;
-    display: block;
-}
-
-.input-group.error input {
-    border-color: #d9534f;
+.error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
 }

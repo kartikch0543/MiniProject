@@ -6,57 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Voting Machine | Project 6</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <h1>E-Voting System</h1>
-        </header>
+        <h1>Voting Machine</h1>
 
-        <div class="candidates-grid">
-            <div class="card" id="c1">
-                <div class="card-icon red">A</div>
-                <h2>Team Alpha</h2>
-                <p>Innovation & Speed</p>
-                <div class="vote-count">Votes: <span id="count1">0</span></div>
-                <button onclick="vote(1)">Vote Alpha</button>
+        <div class="candidates">
+            <div class="candidate-card">
+                <h3>Team A</h3>
+                <button class="vote-btn" onclick="vote('Team A')">Vote</button>
             </div>
-
-            <div class="card" id="c2">
-                <div class="card-icon blue">B</div>
-                <h2>Team Beta</h2>
-                <p>Stability & Trust</p>
-                <div class="vote-count">Votes: <span id="count2">0</span></div>
-                <button onclick="vote(2)">Vote Beta</button>
+            <div class="candidate-card">
+                <h3>Team B</h3>
+                <button class="vote-btn" onclick="vote('Team B')">Vote</button>
             </div>
-
-            <div class="card" id="c3">
-                <div class="card-icon green">C</div>
-                <h2>Team Gamma</h2>
-                <p>Growth & Nature</p>
-                <div class="vote-count">Votes: <span id="count3">0</span></div>
-                <button onclick="vote(3)">Vote Gamma</button>
+            <div class="candidate-card">
+                <h3>Team C</h3>
+                <button class="vote-btn" onclick="vote('Team C')">Vote</button>
             </div>
-
-            <div class="card" id="c4">
-                <div class="card-icon not">NOT</div>
-                <h2>NOTA</h2>
-                <p>None of the Above</p>
-                <div class="vote-count">Votes: <span id="count4">0</span></div>
-                <button onclick="vote(4)">Vote NOTA</button>
+            <div class="candidate-card">
+                <h3>Team D</h3>
+                <button class="vote-btn" onclick="vote('Team D')">Vote</button>
             </div>
         </div>
 
-        <div class="control-panel">
-            <button class="result-btn" onclick="showWinner()">Declare Result</button>
-            <button class="reset-btn" onclick="resetVotes()">Reset All</button>
-        </div>
-
-        <div id="winnerModal" class="modal">
-            <div class="modal-content">
-                <h2 id="winnerText">Winner: Team Alpha!</h2>
-                <button onclick="closeModal()">Close</button>
+        <div id="results">
+            <h2>Live Results</h2>
+            <div id="resultsList">
+                <!-- Results will be computed by JS -->
+                <p>Cast your vote to see results</p>
             </div>
         </div>
     </div>
