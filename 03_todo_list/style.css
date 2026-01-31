@@ -32,7 +32,7 @@ h1 {
     margin-bottom: 1.5rem;
 }
 
-#todoInput {
+#taskInput {
     flex: 1;
     padding: 0.75rem;
     border: 1px solid #e2e8f0;
@@ -40,7 +40,7 @@ h1 {
     font-size: 1rem;
 }
 
-#todoInput:focus {
+#taskInput:focus {
     outline: none;
     border-color: #db2777;
     box-shadow: 0 0 0 3px rgba(219, 39, 119, 0.1);
