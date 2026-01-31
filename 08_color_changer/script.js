@@ -1,27 +1,21 @@
-function getRandomColor() {
-    const letters = '0123456789ABCDEF';
-    let color = '#';
-    for (let i = 0; i < 6; i++) {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f']; // Red, Blue, Green, Yellow
 
-function randomizeAll() {
+function setStaticColors() {
     for (let i = 1; i <= 4; i++) {
         const box = document.getElementById(`box${i}`);
-        const newColor = getRandomColor();
-        box.style.backgroundColor = newColor;
-        box.innerText = newColor; // Show hex code
+
+        // Remove old listeners by cloning
+        const newBox = box.cloneNode(true);
+        box.parentNode.replaceChild(newBox, box);
+
+        // Set style
+        newBox.style.backgroundColor = colors[i - 1];
+        newBox.innerText = "";
+
+        newBox.addEventListener('click', () => {
+            document.body.style.backgroundColor = colors[i - 1];
+        });
     }
 }
 
-// Attach listeners
-for (let i = 1; i <= 4; i++) {
-    const box = document.getElementById(`box${i}`);
-    box.addEventListener('click', randomizeAll);
-
-    // Initial Color
-    box.style.backgroundColor = getRandomColor();
-}
-randomizeAll(); // Run once on load
+setStaticColors();
