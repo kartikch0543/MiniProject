@@ -22,10 +22,19 @@ function renderTasks() {
         tasks.forEach((task, index) => {
             const li = document.createElement('li');
             li.className = `task-item ${task.completed ? 'completed' : ''}`;
+
+            // Priority Color
+            let priorityColor = '#3498db';
+            if (task.priority === 'High') priorityColor = '#e74c3c';
+            if (task.priority === 'Low') priorityColor = '#2ecc71';
+
             li.innerHTML = `
                 <div class="task-content" onclick="toggleTask(${index})">
                     <div class="checkbox-custom"></div>
-                    <span class="task-text">${escapeHtml(task.text)}</span>
+                    <div>
+                        <span class="task-text">${escapeHtml(task.text)}</span>
+                        <span style="font-size:0.8rem; color:${priorityColor}; margin-left:10px;">[${task.priority || 'Normal'}]</span>
+                    </div>
                 </div>
                 <button class="delete-btn" onclick="deleteTask(${index})">
                     Delete
@@ -39,8 +48,9 @@ function renderTasks() {
 
 function addTask() {
     const text = taskInput.value.trim();
+    const priority = document.getElementById('priorityInput').value;
     if (text) {
-        tasks.push({ text, completed: false });
+        tasks.push({ text, completed: false, priority });
         taskInput.value = '';
         renderTasks();
     }

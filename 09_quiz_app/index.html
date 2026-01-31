@@ -15,17 +15,37 @@
     <div class="container">
         <h1>Quiz App</h1>
 
-        <div class="quiz-body" id="quiz">
-            <div class="question-container">
-                <h2 id="question">Question text loads here...</h2>
-                <div class="options-container">
-                    <button class="option-btn">Option A</button>
-                    <button class="option-btn">Option B</button>
-                    <button class="option-btn">Option C</button>
-                    <button class="option-btn">Option D</button>
-                </div>
+        <!-- Start Screen -->
+        <div class="card active" id="startInfo">
+            <h2>Welcome to the Quiz!</h2>
+            <p>5 Questions. Test your web dev skills.</p>
+            <button onclick="startQuiz()">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div class="card" id="quizScreen">
+            <div class="header">
+                <span id="qCount">Q: 1/5</span>
+                <span id="score">Score: 0</span>
             </div>
-            <button id="submitBtn">Submit</button>
+            <div class="progress-bar-bg">
+                <div class="progress-bar" id="progress"></div>
+            </div>
+
+            <h2 id="questionText">Question load...</h2>
+
+            <div class="options-grid" id="optionsGrid">
+                <!-- Buttons injected here -->
+            </div>
+
+            <button id="nextBtn" class="next-btn" onclick="nextQuestion()" disabled>Next Question</button>
+        </div>
+
+        <!-- Result Screen -->
+        <div class="card" id="resultScreen">
+            <h2>Quiz Completed!</h2>
+            <p id="finalScore">You scored X</p>
+            <button onclick="restartQuiz()">Play Again</button>
         </div>
     </div>
     <script src="script.js"></script>

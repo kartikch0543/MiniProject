@@ -16,29 +16,46 @@
         <h1>Voting Machine</h1>
 
         <div class="candidates">
-            <div class="candidate-card">
-                <h3>Team A</h3>
-                <button class="vote-btn" onclick="vote('Team A')">Vote</button>
+            <div class="candidate-card" id="c1">
+                <h3>Team Alpha</h3>
+                <button class="vote-btn" onclick="vote(1)">Vote</button>
             </div>
-            <div class="candidate-card">
-                <h3>Team B</h3>
-                <button class="vote-btn" onclick="vote('Team B')">Vote</button>
+            <div class="candidate-card" id="c2">
+                <h3>Team Beta</h3>
+                <button class="vote-btn" onclick="vote(2)">Vote</button>
             </div>
-            <div class="candidate-card">
-                <h3>Team C</h3>
-                <button class="vote-btn" onclick="vote('Team C')">Vote</button>
+            <div class="candidate-card" id="c3">
+                <h3>Team Gamma</h3>
+                <button class="vote-btn" onclick="vote(3)">Vote</button>
             </div>
-            <div class="candidate-card">
-                <h3>Team D</h3>
-                <button class="vote-btn" onclick="vote('Team D')">Vote</button>
+            <div class="candidate-card" id="c4">
+                <h3>NOTA</h3>
+                <button class="vote-btn" onclick="vote(4)">Vote</button>
             </div>
         </div>
 
         <div id="results">
             <h2>Live Results</h2>
             <div id="resultsList">
-                <!-- Results will be computed by JS -->
-                <p>Cast your vote to see results</p>
+                <p>Alpha: <span id="count1">0</span></p>
+                <p>Beta: <span id="count2">0</span></p>
+                <p>Gamma: <span id="count3">0</span></p>
+                <p>NOTA: <span id="count4">0</span></p>
+            </div>
+            <button onclick="showWinner()"
+                style="margin-top: 20px; padding: 10px 20px; background: #333; color: white; border: none; cursor: pointer;">End
+                Voting & Show Winner</button>
+            <button onclick="resetVotes()"
+                style="margin-top: 20px; padding: 10px 20px; background: #e74c3c; color: white; border: none; cursor: pointer; margin-left:10px;">Reset
+                System</button>
+        </div>
+
+        <!-- Modal Structure for Winner -->
+        <div id="winnerModal"
+            style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.8); align-items:center; justify-content:center;">
+            <div style="background:white; padding:40px; border-radius:10px; text-align:center;">
+                <h2 id="winnerText"></h2>
+                <button onclick="closeModal()" style="margin-top:20px; padding:10px 20px;">Close</button>
             </div>
         </div>
     </div>
