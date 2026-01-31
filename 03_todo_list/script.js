@@ -53,6 +53,10 @@ function addTask() {
         tasks.push({ text, completed: false, priority });
         taskInput.value = '';
         renderTasks();
+        // Feedback
+        console.log('Task added');
+    } else {
+        alert("Please enter a task!");
     }
 }
 
