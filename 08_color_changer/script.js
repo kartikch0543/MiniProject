@@ -1,21 +1,22 @@
-const colors = ['#e74c3c', '#3498db', '#2ecc71', '#f1c40f']; // Red, Blue, Green, Yellow
+const boxes = document.querySelectorAll('.color-box');
 
-function setStaticColors() {
-    for (let i = 1; i <= 4; i++) {
-        const box = document.getElementById(`box${i}`);
+// Fixed final colors (order matters)
+const finalColors = [
+    '#e74c3c', // Red
+    '#3498db', // Blue
+    '#2ecc71', // Green
+    '#f1c40f'  // Yellow
+];
 
-        // Remove old listeners by cloning
-        const newBox = box.cloneNode(true);
-        box.parentNode.replaceChild(newBox, box);
+let revealed = false;
 
-        // Set style
-        newBox.style.backgroundColor = colors[i - 1];
-        newBox.innerText = "";
-
-        newBox.addEventListener('click', () => {
-            document.body.style.backgroundColor = colors[i - 1];
-        });
-    }
-}
-
-setStaticColors();
+boxes.forEach((box, index) => {
+    box.addEventListener('click', () => {
+        if (!revealed) {
+            boxes.forEach((b, i) => {
+                b.style.backgroundColor = finalColors[i];
+            });
+            revealed = true;
+        }
+    });
+});

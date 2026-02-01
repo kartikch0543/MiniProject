@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mini Project Dashboard</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -18,126 +24,116 @@
     <header>
         <div class="container">
             <h1>Mini Projects <span class="highlight">Hub</span></h1>
-            <p>A collection of interactive web applications built with HTML, CSS, and JavaScript.</p>
+            <p>
+                Hi, I’m <strong>Kartik Choudhary</strong>, a student at
+                <strong>Lovely Professional University (LPU)</strong>.<br>
+                Below is a collection of mini projects built using HTML, CSS, and JavaScript.
+            </p>
         </div>
     </header>
 
     <main class="container">
         <div class="projects-grid">
-            <!-- Project 1: Form -->
-            <div class="project-card" onclick="window.location.href='./01_form/index.html'">
+
+            <div class="project-card" onclick="location.href='./01_form/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-file-invoice"></i></div>
                 <div class="card-content">
                     <h2>Form Design</h2>
-                    <p>A responsive and modern form layout with validation.</p>
-                    <a href="./01_form/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Responsive form with validation and modern UI.</p>
+                    <a class="btn-open" href="./01_form/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 2: BMI Calculator -->
-            <div class="project-card" onclick="window.location.href='./02_bmi_calculator/index.html'">
+            <div class="project-card" onclick="location.href='./02_bmi_calculator/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-weight-scale"></i></div>
                 <div class="card-content">
                     <h2>BMI Calculator</h2>
-                    <p>Calculate your Body Mass Index instantly with this tool.</p>
-                    <a href="./02_bmi_calculator/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Instant BMI calculation with category result.</p>
+                    <a class="btn-open" href="./02_bmi_calculator/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 3: Todo List -->
-            <div class="project-card" onclick="window.location.href='./03_todo_list/index.html'">
+            <div class="project-card" onclick="location.href='./03_todo_list/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-list-check"></i></div>
                 <div class="card-content">
                     <h2>Todo List</h2>
-                    <p>Manage your daily tasks efficiently with local storage support.</p>
-                    <a href="./03_todo_list/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Task management app using Local Storage.</p>
+                    <a class="btn-open" href="./03_todo_list/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 4: Stopwatch -->
-            <div class="project-card" onclick="window.location.href='./04_stopwatch/index.html'">
+            <div class="project-card" onclick="location.href='./04_stopwatch/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-stopwatch"></i></div>
                 <div class="card-content">
                     <h2>Stopwatch</h2>
-                    <p>A precise stopwatch with lap functionality for timing events.</p>
-                    <a href="./04_stopwatch/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Accurate stopwatch with lap feature.</p>
+                    <a class="btn-open" href="./04_stopwatch/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 5: Bank Management -->
-            <div class="project-card" onclick="window.location.href='./05_bank_management/index.html'">
+            <div class="project-card" onclick="location.href='./05_bank_management/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-building-columns"></i></div>
                 <div class="card-content">
                     <h2>Bank Management</h2>
-                    <p>Simulate banking operations like deposit and withdrawal.</p>
-                    <a href="./05_bank_management/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Simulated banking system for deposits and withdrawals.</p>
+                    <a class="btn-open" href="./05_bank_management/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 6: Voting Machine -->
-            <div class="project-card" onclick="window.location.href='./06_voting_machine/index.html'">
+            <div class="project-card" onclick="location.href='./06_voting_machine/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-check-to-slot"></i></div>
                 <div class="card-content">
                     <h2>Voting Machine</h2>
-                    <p>An interactive digital voting system prototype.</p>
-                    <a href="./06_voting_machine/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Simple digital voting prototype.</p>
+                    <a class="btn-open" href="./06_voting_machine/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 7: Power Calculator -->
-            <div class="project-card" onclick="window.location.href='./07_power_calculator/index.html'">
+            <div class="project-card" onclick="location.href='./07_power_calculator/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-calculator"></i></div>
                 <div class="card-content">
                     <h2>Power Calculator</h2>
-                    <p>Compute mathematical powers and exponents easily.</p>
-                    <a href="./07_power_calculator/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Calculate powers and exponents easily.</p>
+                    <a class="btn-open" href="./07_power_calculator/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 8: Color Changer -->
-            <div class="project-card" onclick="window.location.href='./08_color_changer/index.html'">
+            <div class="project-card" onclick="location.href='./08_color_changer/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-palette"></i></div>
                 <div class="card-content">
                     <h2>Color Changer</h2>
-                    <p>Dynamically change background colors with infinite hues.</p>
-                    <a href="./08_color_changer/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Interactive color switching mini project.</p>
+                    <a class="btn-open" href="./08_color_changer/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
 
-            <!-- Project 9: Quiz App -->
-            <div class="project-card" onclick="window.location.href='./09_quiz_app/index.html'">
+            <div class="project-card" onclick="location.href='./09_quiz_app/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-brain"></i></div>
                 <div class="card-content">
                     <h2>Quiz App</h2>
-                    <p>Test your knowledge with this interactive quiz application.</p>
-                    <a href="./09_quiz_app/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>MCQ-based quiz with score tracking.</p>
+                    <a class="btn-open" href="./09_quiz_app/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
-            <!-- Project 10: Task Manager -->
-            <div class="project-card" onclick="window.location.href='./10_task_manager/index.html'">
+
+            <div class="project-card" onclick="location.href='./10_task_manager/index.html'">
                 <div class="card-icon"><i class="fa-solid fa-clipboard-list"></i></div>
                 <div class="card-content">
                     <h2>Task Manager</h2>
-                    <p>Kanban-style task board with Todo, Doing, and Done columns.</p>
-                    <a href="./10_task_manager/index.html" class="btn-open">View Project <i
-                            class="fa-solid fa-arrow-right"></i></a>
+                    <p>Kanban board with Todo, Doing and Done.</p>
+                    <a class="btn-open" href="./10_task_manager/index.html">View Project <i class="fa-solid fa-arrow-right"></i></a>
                 </div>
             </div>
+
         </div>
     </main>
 
     <footer>
-        <p>Built with <i class="fa-solid fa-heart" style="color: var(--primary);"></i> by Kartik</p>
+        <p>
+            Built with <i class="fa-solid fa-heart"></i>
+            by <strong>Kartik Choudhary</strong> · Lovely Professional University
+        </p>
     </footer>
-</body>
 
+</body>
 </html>

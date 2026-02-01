@@ -1,84 +1,98 @@
 body {
     font-family: 'Inter', sans-serif;
-    background-color: #f8fafc;
+    background: #f8fafc;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     margin: 0;
-    color: #334155;
 }
 
 .container {
-    background-color: white;
+    background: white;
     padding: 2.5rem;
     border-radius: 12px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
     width: 100%;
     max-width: 450px;
-    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
 
-h1 {
+header {
     text-align: center;
-    color: #1e293b;
     margin-bottom: 2rem;
-    font-size: 1.75rem;
-    font-weight: 700;
 }
 
+header p {
+    color: #64748b;
+}
+
+/* Floating input group */
 .input-group {
+    position: relative;
     margin-bottom: 1.5rem;
-    width: 100%;
 }
 
-label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-    color: #475569;
-}
-
-input,
-select,
-textarea {
+.input-group input {
     width: 100%;
-    padding: 0.75rem;
+    padding: 14px 12px;
     border: 1px solid #cbd5e1;
     border-radius: 8px;
     font-size: 1rem;
-    color: #1e293b;
-    box-sizing: border-box;
-    transition: border-color 0.2s;
-}
-
-input:focus,
-select:focus,
-textarea:focus {
     outline: none;
-    border-color: #6366f1;
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
 }
 
-button {
+.input-group label {
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: white;
+    padding: 0 6px;
+    color: #64748b;
+    pointer-events: none;
+    transition: 0.3s ease;
+}
+
+/* Float label when typing */
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -8px;
+    font-size: 0.75rem;
+    color: #6366f1;
+}
+
+/* Error state */
+.input-group.error input {
+    border-color: #ef4444;
+}
+
+.error-msg {
+    font-size: 0.8rem;
+    color: #ef4444;
+    margin-top: 4px;
+    display: block;
+}
+
+/* Terms */
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Button */
+.btn-submit {
     width: 100%;
-    padding: 0.875rem;
-    background-color: #6366f1;
+    padding: 0.9rem;
+    background: #6366f1;
     color: white;
     border: none;
     border-radius: 8px;
     font-size: 1rem;
-    font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.2s;
 }
 
-button:hover {
-    background-color: #4f46e5;
-}
-
-.error {
-    color: #ef4444;
-    font-size: 0.875rem;
-    margin-top: 0.25rem;
+.btn-submit:hover {
+    background: #4f46e5;
 }

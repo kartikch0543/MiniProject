@@ -1,69 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Manager | Project 10</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Task Manager</title>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Task Manager</h1>
-            <button id="addTaskBtn">+ New Task</button>
-        </header>
 
-        <div class="kanban-board">
-            <!-- Todo Column -->
-            <div class="column" id="col-todo">
-                <div class="column-header todo-header">
-                    <h2>To Do</h2>
-                    <span class="count" id="count-todo">0</span>
-                </div>
-                <div class="task-list" id="list-todo">
-                    <!-- Tasks go here -->
-                </div>
-            </div>
+<div class="container">
+    <header>
+        <h1>Task Manager</h1>
+        <button id="addTaskBtn">+ New Task</button>
+    </header>
 
-            <!-- Doing Column -->
-            <div class="column" id="col-doing">
-                <div class="column-header doing-header">
-                    <h2>Doing</h2>
-                    <span class="count" id="count-doing">0</span>
-                </div>
-                <div class="task-list" id="list-doing"></div>
-            </div>
+    <div class="kanban-board">
 
-            <!-- Done Column -->
-            <div class="column" id="col-done">
-                <div class="column-header done-header">
-                    <h2>Done</h2>
-                    <span class="count" id="count-done">0</span>
-                </div>
-                <div class="task-list" id="list-done"></div>
+        <div class="column">
+            <div class="column-header todo-header">
+                <h2>To Do</h2>
+                <span class="count" id="count-todo">0</span>
             </div>
+            <div class="task-list" id="list-todo"></div>
+        </div>
+
+        <div class="column">
+            <div class="column-header doing-header">
+                <h2>Doing</h2>
+                <span class="count" id="count-doing">0</span>
+            </div>
+            <div class="task-list" id="list-doing"></div>
+        </div>
+
+        <div class="column">
+            <div class="column-header done-header">
+                <h2>Done</h2>
+                <span class="count" id="count-done">0</span>
+            </div>
+            <div class="task-list" id="list-done"></div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Modal -->
+<div class="modal" id="taskModal">
+    <div class="modal-content">
+        <h2 id="modalTitle">Add Task</h2>
+        <input type="text" id="taskTitle" placeholder="Task title">
+        <textarea id="taskDesc" placeholder="Task description (optional)"></textarea>
+        <div class="modal-actions">
+            <button id="cancelBtn">Cancel</button>
+            <button id="saveBtn">Save</button>
         </div>
     </div>
+</div>
 
-    <!-- Modal for New Task -->
-    <div id="taskModal" class="modal">
-        <div class="modal-content">
-            <h2 id="modalTitle">Add New Task</h2>
-            <input type="text" id="taskTitle" placeholder="Task Title" autocomplete="off">
-            <textarea id="taskDesc" placeholder="Description (optional)"></textarea>
-            <div class="modal-actions">
-                <button id="cancelBtn">Cancel</button>
-                <button id="saveBtn">Save Task</button>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>
